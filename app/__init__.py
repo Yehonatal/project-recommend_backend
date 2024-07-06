@@ -1,7 +1,5 @@
 from flask import Flask
-
-# Importing routes from routes.py
-from app import routes
-
+from app.routes import bp  # Blueprint
 
 app = Flask(__name__)
+app.register_blueprint(bp)  # Register Blueprint with the app
